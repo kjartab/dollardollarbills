@@ -1,0 +1,8 @@
+---
+- hosts: default
+  become: yes
+  tasks:
+    - command: ansible-galaxy install {{item}}
+      with_items:
+        - geerlingguy.nodejs
+        - geerlingguy.elasticsearch
